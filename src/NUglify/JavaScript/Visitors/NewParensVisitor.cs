@@ -207,10 +207,7 @@ namespace NUglify.JavaScript.Visitors
         public void Visit(MemberExpression node)
         {
             // need to recurse the collection
-            if (node != null)
-            {
-                node.Root.Accept(this);
-            }
+            node?.Root?.Accept(this);
         }
 
         public void Visit(ObjectLiteral node)
